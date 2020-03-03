@@ -12,10 +12,17 @@ def directors_totals(nds)
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
   result = {
   }
-  index = 0
-  while index < nds.length do
-    director_names = nds[index][:name]
+  dir_index = 0
+  while dir_index < nds.length do
+    director_names = nds[dir_index][:name]
     result[director_names] = 0
+    mov_index = 0
+
+    while mov_index < nds[dir_index][:movies].length do
+      result += nds[dir_index][:movies][mov_index][:worldwide_gross]
+    mov_index += 1
+    end
+
     index +=1
   end
   #
