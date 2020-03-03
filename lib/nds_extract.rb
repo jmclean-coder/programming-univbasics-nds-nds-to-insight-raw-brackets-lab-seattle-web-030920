@@ -23,7 +23,7 @@ def directors_totals(nds)
     mov_index += 1
     end
 
-    index +=1
+    dir_index +=1
   end
   #
 
